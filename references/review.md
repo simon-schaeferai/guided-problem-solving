@@ -12,4 +12,4 @@ Tiefe nach Arbeitsumfang: **S** nur der stille Kurzcheck auf Freigabepflicht (SK
 | Qualitätshebel? | Wo entsteht der größte Qualitätsgewinn pro Aufwand? |
 | Effizienzhebel? | Was lässt sich wiederverwenden, cachen, parallelisieren? |
 
-Ergebnis: Liste „geändert / bewusst nicht geändert (Grund)". Ein zweiter Durchgang nur mit neuer Information.
+Ergebnis: Liste „geändert / bewusst nicht geändert (Grund)". Bei M und L zusätzlich höchstens 3 blinde Flecken für den User (SKILL.md Abschnitt 3, Baustein 5). Ein zweiter Durchgang nur mit neuer Information.

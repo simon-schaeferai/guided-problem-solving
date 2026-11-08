@@ -31,3 +31,12 @@ Ein **zwingender Blocker** ist ein Input, ohne den kein sinnvoller Default mögl
 - Optionen statt offener Frage, empfohlene Option zuerst mit „(Empfohlen)“ und einem Satz Warum.
 - Zusammenhängende Fragen bündeln, unabhängige auf spätere Runden verteilen.
 - Bei Geschmacksfragen Varianten zeigen statt Fragen stellen.
+
+## Interview: implizites Wissen
+Für die Dinge, die der User weiß, aber nie aufschreiben würde. Offene Fragen, keine Optionen; 3 bis 5 auswählen, die zum Vorhaben passen:
+- Woran merkst du sofort, dass ein Ergebnis falsch ist?
+- Was hast du schon probiert und verworfen, und warum?
+- Welche Ausnahme oder Sonderregel kennst du, die nirgends steht?
+- Was machst du jedes Mal gleich, ohne darüber nachzudenken?
+- Wie sähe ein Ergebnis aus, das formal stimmt, dich aber trotzdem stört?
+Antworten als **Absicht des Users** festhalten (bei Projektgedächtnis in `DECISIONS.md`), getrennt von gemessenen Befunden.

@@ -70,7 +70,7 @@ Jeden Baustein nur ausführen, wenn er für diese Klasse und dieses Problem etwa
 2. **Ziel und Erfolgskriterien:** Ein Satz Endergebnis, Muss vs. Kann, je Muss ein prüfbares Kriterium (Messmethode und Schwelle). Bei Zielkonflikten den Vorrang des Users übernehmen; ohne Vorgabe einen begründeten Default setzen und als Annahme kennzeichnen.
 3. **Kontext und Lücken:** Inventar des Vorhandenen, soweit es den nächsten Schritt beeinflusst. Lücken nur auflisten, wenn sie eine Entscheidung ändern.
 4. **Strategie wählen** (Abschnitt 4). Alternativen nur bewerten, wenn mehr als eine realistisch ist.
-5. **Risiken, Annahmen, Budget:** den **einen** kritischsten Unsicherheitsfaktor benennen. Review nach `references/review.md` (S: entfällt bis auf 1b · M: nur die Punkte, die das konkrete Risiko betreffen, Abhängigkeiten eingeschlossen, wenn sie entscheiden · L: vollständig). Vor dem ersten Versuch Budget und Abbruchgrenzen festlegen (Abschnitt 6).
+5. **Risiken, Annahmen, Budget:** den **einen** kritischsten Unsicherheitsfaktor benennen. Review nach `references/review.md` (S: entfällt bis auf 1b · M: nur die Punkte, die das konkrete Risiko betreffen, Abhängigkeiten eingeschlossen, wenn sie entscheiden · L: vollständig). Bei M und L dem User danach seine **blinden Flecken** zeigen: höchstens 3 Punkte, die er vermutlich nicht bedacht hat, je ein Satz mit Folge und Vorschlag. Nur nennen, nicht fragen, außer einer ändert das Ziel. Vor dem ersten Versuch Budget und Abbruchgrenzen festlegen (Abschnitt 6).
 6. **Umsetzen:** mit dem kleinsten Schritt beginnen, der den kritischsten Faktor prüft (Machbarkeitstest mit vorher festgelegtem Bestanden-Kriterium). Fällt er durch, Strategie neu wählen statt weiterbauen; der Versuch zählt auf Budget und Zähler. Ein bestandener Machbarkeitstest belegt nur das Kriterium, das er geprüft hat.
 7. **Testen, analysieren, verbessern:** Abschnitt 6.
 8. **Validieren:** gegen alle Muss-Kriterien aus Baustein 2, je Kriterium mit Beleg (Abschnitt 7).
@@ -96,11 +96,12 @@ Strategien kombinieren ist normal. Reverse Engineering ist nie Voraussetzung fü
 
 ## 5 · Fragen
 
-Drei Arten, jede mit eigenem Endzustand:
+Vier Arten, jede mit eigenem Endzustand:
 
 | Art | Regel | Ohne Antwort |
 |---|---|---|
 | **Reguläre Discovery** | S: keine · M: höchstens eine Runde · L: höchstens zwei Runden vor dem ersten prüfbaren Artefakt. Je Runde 1 bis 3 entscheidungsrelevante Fragen, empfohlene Option zuerst mit einem Satz Trade-off. | Empfehlung gilt, als korrigierbare Annahme genannt. |
+| **Interview zu implizitem Wissen** | Nur bei M und L, wenn Wissen, das der User nie aufschreiben würde, über die Qualität entscheidet (Geschmack, Fachwissen, eigener Stil, ungeschriebene Ausnahmen). Einmal vor dem ersten Artefakt, 3 bis 5 offene Fragen aus `references/discovery.md`. Zählt nicht gegen die Discovery-Runden. | Mit Beispielen oder Varianten weiter; die Reaktion darauf ersetzt das Interview. |
 | **Zwingender Blocker** (Input ohne sinnvollen Default) | Je Blocker **einmal** gezielt fragen, auch außerhalb der Discovery-Runden. Dieselbe Frage erst wieder, wenn sich der Sachstand ändert. | Abhängiger Schritt: **blockiert: <Input>**. Nur unabhängige Arbeit erledigen. Nichts erfinden. |
 | **Freigabe** | Nach 1b, pro Aktion. | **wartet auf Freigabe**; nie als erteilt werten. |
 
