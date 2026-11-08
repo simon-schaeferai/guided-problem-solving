@@ -1,0 +1,12 @@
+# Betriebssystem
+.DS_Store
+Thumbs.db
+# Editor
+.vscode/
+.idea/
+*.swp
+# Secrets (der Skill braucht keine)
+.env
+.env.*
+# Lokales Projektgedächtnis, falls jemand den Skill im eigenen Ordner testet
+.guided/
