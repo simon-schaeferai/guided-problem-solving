@@ -1,6 +1,6 @@
 # Failure Learning: testen, verstehen, gezielt verbessern
 
-**Voraussetzung:** eine Feedbackquelle (SKILL.md Abschnitt 6). Ohne sie keine Schleife simulieren, sondern das Ergebnis als unverifiziert kennzeichnen. Budget, die drei Zähler und die Abbruchgrenzen regelt ebenfalls Abschnitt 6; hier stehen nur Ablauf und Logformat.
+**Voraussetzung:** eine Feedbackquelle (SKILL.md Abschnitt 6). Ohne sie keine Schleife simulieren, sondern das Ergebnis als unverifiziert kennzeichnen. Begriffe (Versuch, Ansatz, gescheitert), die drei Zähler und die Abbruchgrenzen regelt ebenfalls Abschnitt 6; hier stehen nur Ablauf und Logformat.
 
 ## Vor dem ersten Versuch
 - Qualitätskriterien als prüfbare Liste (Kriterium | Messmethode | Schwelle), mindestens für jedes Muss.
@@ -19,10 +19,10 @@ Ein bestandener Test belegt nur das Kriterium, das er geprüft hat. Nie denselbe
 ## Log
 In `TEST_RESULTS.md`, sobald Projektgedächtnis besteht; sonst im Chat. Die Zähler stehen zusätzlich in `PROGRESS.md`.
 ```
-### V<n> · <Datum> · Ansatz <A-Nr> · <Komponente>
+### V<n> · <Datum> · Ansatz A<n> · <Komponente>
 Hypothese: …
 Aktion: …
-Ergebnis: bestanden / nicht bestanden (Messwert) · Mindestfortschritt: ja/nein
+Ergebnis: bestanden / nicht bestanden (Messwert) · Mindestfortschritt: ja/nein · Ansatz widerlegt: ja/nein (Beleg)
 Ursache: …
 Zähler danach: Budget <x>/<gesamt> · gescheiterte Ansätze <y>/3 · Serie ohne Fortschritt <z>/2
 Nächster Versuch / Regel abgeleitet: …

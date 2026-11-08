@@ -43,9 +43,13 @@ Daten löschen oder fremde Daten überschreiben · Kosten auslösen (API-Credits
 - Eine Ankündigung ist keine Freigabe. Bezahlte Experimente: Zweck, Obergrenze mit Einheit und Abbruchschwelle nennen und auf ein ausdrückliches Ja warten.
 - Fehlt eine Freigabe, nur unabhängige, bereits erlaubte Vorbereitung fortsetzen (lesen, lokal entwerfen, kostenlos testen). Der abhängige Schritt wird als **wartet auf Freigabe** gemeldet.
 - Eine Freigabe gilt nur für den genannten Umfang (was, wo, wie viel, einmalig oder wiederholt), nicht darüber hinaus und nicht für spätere ähnliche Aktionen.
-- **Frühere Freigaben (Fortsetzung, Wiederaufnahme):** Sie gelten nur, wenn sie nachweislich zur konkreten anstehenden Aktion passen (gleiche Aktion, gleiches Ziel, Umfang nicht überschritten) und noch gültig sind (nicht widerrufen, Gültigkeitsbedingung erfüllt, Sachlage unverändert). Eine **einmalige** Freigabe, die als genutzt vermerkt ist, ist verbraucht.
-- **Unklarer Ausführungsstand:** Ist nach einer Unterbrechung unklar, ob eine freigabepflichtige Aktion schon lief, zuerst den tatsächlichen Zustand lesend prüfen (Zielsystem, Logs, Abrechnung, Ausgabedateien). Bleibt er ungeklärt, den abhängigen Schritt stoppen und den User mit dem Befund fragen. Nie automatisch wiederholen.
-- Vor jeder freigabepflichtigen Aktion in `PROGRESS.md` „begonnen <Zeit>“ notieren, danach „ausgeführt, Beleg …“ (nur bei Projektgedächtnis), damit eine Unterbrechung erkennbar bleibt.
+- **Frühere Freigaben (Fortsetzung, Wiederaufnahme):** Sie gelten nur, wenn sie nachweislich zur konkreten anstehenden Aktion passen (gleiche Aktion, gleiches Ziel, Umfang nicht überschritten) und noch gültig sind (nicht widerrufen, Gültigkeitsbedingung erfüllt, Sachlage unverändert).
+
+**c) Einmalige Aktionen gegen Doppelausführung sichern.** Gilt nur für freigabepflichtige Aktionen, die bei zweifacher Ausführung schaden (bezahlen, senden, veröffentlichen, buchen, anlegen) und deren Ergebnis sich nicht sicher am Zielsystem ablesen lässt. Alles andere braucht diesen Schritt nicht.
+- Status der Freigabe: **frei → reserviert → begonnen → ausgeführt** (mit Beleg). Daneben **abgebrochen** (vor dem Auslösen gestoppt, ohne Wirkung, damit wieder frei) und **wartet auf Klärung**. Vor dem Start „reserviert“, direkt vor dem Auslösen „begonnen“, danach das Ergebnis.
+- Ort: Freigabe-Tabelle in `PROGRESS.md`. Gibt es noch kein Projektgedächtnis, für diese eine Aktion ein minimales `PROGRESS.md` (Kopf und Freigabe-Tabelle) anlegen; eine Chat-Notiz überlebt keine Unterbrechung.
+- Steht nach einer Unterbrechung eine Freigabe auf „reserviert“ oder „begonnen“: zuerst den tatsächlichen Zustand lesend prüfen (Zielsystem, Logs, Abrechnung, Ausgabedateien). Belegt nicht ausgeführt: zurück auf „frei“, einmal ausführen. Belegt ausgeführt: „ausgeführt“. Weiter ungeklärt: **wartet auf Klärung**; nicht wiederholen, bis der User den Zustand klärt oder eine neue Freigabe erteilt.
+- Ausgelöst werden darf nur eine Freigabe im Status „frei“. „Ausgeführt“ ist verbraucht.
 
 ## 2 · Grundregeln
 
@@ -117,12 +121,22 @@ Nur wenn eine **Feedbackquelle** existiert. Vor dem Bau festlegen, welche:
 
 **Vor dem ersten Versuch festlegen:** Gesamtbudget (Versuche, Zeit, Kosten), Mindestfortschritt je Versuch und Abbruchgrenzen.
 
-**Drei Zähler**, die für das ganze Vorhaben gelten und durch keinen Strategie- oder Sessionwechsel zurückgesetzt werden:
-1. **Budget verbraucht** (Versuche, Zeit, Kosten). Grenze: Gesamtbudget.
-2. **Gescheiterte Ansätze.** Grenze: 3.
-3. **Serie ohne Mindestfortschritt** im aktuellen Ansatz. Grenze: 2, dann Ansatzwechsel (Zähler 2 steigt um 1, Serie beginnt neu bei 0).
+**Begriffe:**
+- **Versuch:** eine Änderung plus eine Prüfung gegen die Feedbackquelle. Dieselbe Prüfung ohne Änderung erneut laufen zu lassen, ist kein neuer Versuch.
+- **Ansatz:** ein bestimmter Lösungsweg, erkennbar am Mechanismus (Werkzeug, Methode, Architektur). Andere Parameter oder ein neuer Name im selben Mechanismus sind derselbe Ansatz.
+- **Ansatz gescheitert:** zwei Versuche in Folge ohne Mindestfortschritt **oder** ein Versuch, der die Voraussetzung des Ansatzes nachweislich widerlegt (z. B. die Schnittstelle kann das Nötige nicht). Dann ist ein Ansatzwechsel Pflicht.
 
-**Vor jedem weiteren Versuch** die Zähler prüfen: Ist eine Grenze erreicht, keinen Versuch starten, sondern stoppen und berichten (was versucht, was gelernt, Optionen mit Empfehlung). Mehr Budget oder weitere Ansätze gibt nur der User. Identische Versuche sind verboten. Bei Projektgedächtnis stehen die Zähler in `PROGRESS.md` und werden nach jedem Versuch aktualisiert.
+**Drei Zähler** für das ganze Vorhaben:
+
+| Zähler | Ändert sich | Grenze |
+|---|---|---|
+| Budget verbraucht (Versuche, Zeit, Kosten) | nach jedem Versuch | Gesamtbudget |
+| Gescheiterte Ansätze | +1, wenn ein Ansatz scheitert | 3 |
+| Serie ohne Mindestfortschritt | +1 ohne Fortschritt; 0 bei Fortschritt oder nach Ansatzwechsel | 2, dann gilt der Ansatz als gescheitert |
+
+Versuchsnummern laufen über Ansätze hinweg weiter. Kein Session-, Strategie- oder Namenswechsel setzt einen Zähler zurück, und kein Zähler wird ohne Beleg auf 0 gesetzt; ein nicht belegbarer Stand heißt **unbekannt** (Abschnitt 8, Hochstufen).
+
+**Vor jedem weiteren Versuch** die Zähler prüfen. Endgültig stoppen, wenn 3 Ansätze gescheitert sind oder das Budget erreicht ist: keinen Versuch starten, sondern berichten (was versucht, was gelernt, Optionen mit Empfehlung). Mehr Budget oder weitere Ansätze gibt nur der User. Identische Versuche sind verboten. Bei Projektgedächtnis stehen die Zähler in `PROGRESS.md` und werden nach jedem Versuch aktualisiert.
 
 Schleife und Logformat: `references/failure-learning.md`.
 
@@ -137,7 +151,9 @@ Schleife und Logformat: `references/failure-learning.md`.
 
 **Ergebnisdateien** sind das, was die Aufgabe liefern soll (Code, Dokument, Konfiguration). Sie liegen dort, wo der User oder das Projekt sie braucht. **Projektgedächtnis** ist optional und dient nur der Fortsetzung. Beides nie vermischen.
 
-**Wann:** nur, wenn das Vorhaben über die aktuelle Session hinausgeht, mehrere Beteiligte hat oder Klasse L vorliegt. Sonst bleiben Befunde, Testlog und Entscheidungen im Chat.
+**Wann:** nur, wenn das Vorhaben über die aktuelle Session hinausgeht, mehrere Beteiligte hat, Klasse L vorliegt oder eine einmalige Aktion nach 1c ansteht. Sonst bleiben Befunde, Testlog und Entscheidungen im Chat.
+
+**Hochstufen auf L oder Übergang in eine weitere Session:** Gedächtnis sofort anlegen und aus dem Chat übernehmen, was die Fortsetzung braucht: Ergebnisse, Versuche mit Ergebnis, gescheiterte Ansätze mit Grund, Entscheidungen und Annahmen, Freigaben mit Status. Zähler nur mit Beleg übernehmen, sonst als **unbekannt** eintragen, nie als 0. Ist ein Zähler oder ein Freigabestatus unbekannt, vor dem nächsten kostenpflichtigen oder freigabepflichtigen Versuch den Stand rekonstruieren (Chatverlauf, Logs, Zielsystem). Gelingt das nicht, das Budget vom User neu bestätigen lassen; kostenlose, harmlose Versuche dürfen weiterlaufen.
 
 **Projektkennung:** `<YYYY-MM-DD>-<slug>-<4 Zeichen>` (z. B. `2026-11-08-rechnungsimport-k3f9`, Suffix zufällig aus a–z/0–9). Einmal vergeben, nie geändert; steht im Ordnernamen und im Kopf von `PROGRESS.md`.
 
@@ -148,21 +164,23 @@ Schleife und Logformat: `references/failure-learning.md`.
 **Vor dem ersten Schreiben:**
 1. Ort beschreibbar und nach Projektregeln erlaubt? Sonst den anderen Ort nehmen oder nach einem Pfad fragen.
 2. Kollision: Existiert der Ordner schon, ein neues Suffix ziehen.
-3. Liegt der Ort in einem Git-Repo: mit `git check-ignore` prüfen. Ist er nicht ignoriert, den Pfad in `.git/info/exclude` eintragen (lokal, nicht versioniert) und das nennen. Nie versehentlich einchecken.
+3. Liegt der Ort in einem Git-Repo: mit `git check-ignore` prüfen. Ist er nicht ignoriert und erlauben die Projektregeln Änderungen an Git-Metadaten, den Pfad in `.git/info/exclude` eintragen (lokal, nicht versioniert) und das nennen. Sonst den Desktop nehmen oder nach einem Ort außerhalb des Repos fragen. Nie versehentlich einchecken.
 4. **Sensible Rohdaten** (Kundendaten, Exporte, Zugangsdaten, private Medien) bleiben am freigegebenen Projektort; das Gedächtnis enthält nur Pfade, Zusammenfassungen und Kennzahlen.
 
 **Dateien** (Vorlagen in `templates/`):
-- **Kern:** `PROGRESS.md` ist die **maßgebliche Quelle** für Projektkennung, Vorhaben (ein Satz), Arbeitsordner, Gedächtnisort, den **unmittelbar nächsten Schritt mit Freigabestatus**, die drei Zähler aus Abschnitt 6 und die Freigaben (Umfang, Art, Gültigkeit, genutzt, Beleg). `NEXT_STEPS.md` enthält nur nachgelagerte Schritte und offene Fragen; bei Widerspruch gilt `PROGRESS.md`.
+- **Kern:** `PROGRESS.md` ist die **maßgebliche Quelle** für Projektkennung, Vorhaben (ein Satz), Arbeitsordner, Gedächtnisort, den **unmittelbar nächsten Schritt mit Freigabestatus**, die drei Zähler aus Abschnitt 6 und die Freigaben (Umfang, Art, Gültigkeit, Status nach 1c, Beleg). `NEXT_STEPS.md` enthält nur nachgelagerte Schritte und offene Fragen; bei Widerspruch gilt `PROGRESS.md`.
 - **Bei Bedarf:** `PROJECT_BRIEF.md` (Ziel, Kriterien), `DECISIONS.md` (Entscheidungen, Annahmen), `ARCHITECTURE.md` (mehrere Bausteine), `IMPLEMENTATION_PLAN.md` (mehr als ca. 5 Schritte), `TEST_RESULTS.md` (sobald Projektgedächtnis besteht und iterativ getestet wird; Details je Versuch, die Zähler bleiben in `PROGRESS.md`).
 
 **Fortsetzung:**
 1. Kandidaten suchen: `~/Desktop` und, falls bekannt, `<arbeitsordner>/.guided/` nach Stichwort oder Projektkennung.
 2. **Jeden** Treffer prüfen, auch einen einzelnen: Passen Vorhaben und Arbeitsordner im `PROGRESS.md`-Kopf zum aktuellen Auftrag und existiert der Arbeitsordner? Nicht passende Treffer verwerfen.
 3. Bleiben mehrere passende Treffer, die Kandidaten mit Projektkennung, Datum und Vorhaben zur Auswahl stellen. Bleibt keiner und ist der Arbeitsordner unbekannt, gezielt nach dem Pfad fragen.
-4. `PROGRESS.md` und `NEXT_STEPS.md` lesen, weitere Dateien nur bei Bedarf. Zähler übernehmen, Freigaben nach 1b neu prüfen, „begonnen“-Vermerke ohne „ausgeführt“ nach 1b klären. Stand in einem Satz melden und weitermachen.
+4. `PROGRESS.md` und `NEXT_STEPS.md` lesen, weitere Dateien nur bei Bedarf. Zähler übernehmen, Freigaben nach 1b prüfen, offene Status nach 1c klären. Stand in einem Satz melden und weitermachen.
 
 **Übergabetest:** Könnte eine neue Session mit `PROGRESS.md` und `NEXT_STEPS.md` in einer Minute weitermachen? Wenn nein, nachschärfen. `PROGRESS.md` unter ca. 60 Zeilen halten, verlinken statt kopieren.
 
 ## 9 · Effizienz
 
-Keine unveränderte Datei zweimal lesen. Bei Logs den bekannten Stand nutzen und nur neue Einträge lesen (z. B. ab der letzten bekannten Versuchsnummer). Tabellen statt Prosa. Keine Dokumente, die niemand liest.
+- Bekannten Dateistand nutzen; erneut lesen, wenn sich die Datei verändert haben könnte (andere Session, Tool, User) oder bevor auf ihrer Grundlage eine freigabepflichtige Aktion folgt. Bei Logs nur neue Einträge lesen (z. B. ab der letzten bekannten Versuchsnummer).
+- Die Absicherungen kosten harmlose Aufgaben nichts: S bleibt beim stillen Kurzcheck aus 1b, 1c greift nur bei schädlicher Doppelausführung.
+- Tabellen statt Prosa. Keine Dokumente, die niemand liest.
