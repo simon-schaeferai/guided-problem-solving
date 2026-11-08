@@ -18,8 +18,11 @@
 Mindestfortschritt je Versuch: <…> · Letzter Versuch: V<n> · Details: `TEST_RESULTS.md`
 
 ## Freigaben
-| Nr | Datum | Umfang (was, wo, wie viel) | Art (einmalig/wiederholt) | Gültig bis/solange | Status (frei/reserviert/begonnen/ausgeführt/abgebrochen/wartet auf Klärung) mit Zeit und Beleg | Beleg der Zusage (Wortlaut/Fundstelle) |
+| Nr | Datum | Umfang (was, wo, wie viel) | Art (einmalig/wiederholt) | Gültig bis/solange | Status (frei/reserviert/ausgelöst/erledigt/abgebrochen/wartet auf Klärung, siehe `references/einmalige-aktionen.md`) mit Zeit und Beleg | Beleg der Zusage (Wortlaut/Fundstelle) |
 |---|---|---|---|---|---|---|
+
+## Messplan (nur wenn die Wirkung später gemessen wird)
+Was · wann · wer misst · Entscheidungsregel
 
 ## Muss-Kriterien
 | Kriterium | Status | Beleg |

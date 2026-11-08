@@ -7,4 +7,5 @@ Der unmittelbar nächste Schritt und sein Freigabestatus stehen in `PROGRESS.md`
 3. …
 
 ## Offene Fragen an den User
-- …
+| Frage | Art (Discovery/Interview/Blocker) | gestellt am | Antwort |
+|---|---|---|---|

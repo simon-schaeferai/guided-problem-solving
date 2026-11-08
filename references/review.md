@@ -1,6 +1,6 @@
 # Critical Review: ein Durchgang, dann handeln
 
-Tiefe nach Arbeitsumfang: **S** nur der stille Kurzcheck auf Freigabepflicht (SKILL.md Abschnitt 1b), diese Tabelle entfällt. **M** nur die Zeilen, die das konkrete Risiko betreffen; Abhängigkeiten immer, wenn sie über Erfolg oder Kosten entscheiden. **L** die ganze Tabelle. Die Freigabeprüfung pro Aktion gilt in jeder Klasse.
+Tiefe nach Arbeitsumfang: **S** braucht diese Datei nicht (nur der stille Kurzcheck auf Freigabepflicht, SKILL.md Abschnitt 1b). **M** nur die Zeilen, die das konkrete Risiko betreffen; Abhängigkeiten immer, wenn sie über Erfolg oder Kosten entscheiden. **L** die ganze Tabelle. Die Freigabeprüfung pro Aktion gilt in jeder Klasse.
 
 | Frage | Prüfen |
 |---|---|

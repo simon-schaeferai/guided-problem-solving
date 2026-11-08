@@ -1,6 +1,6 @@
 # Discovery: Fragen finden, priorisieren, stellen
 
-Wie viele Runden erlaubt sind und was ohne Antwort passiert, regelt SKILL.md Abschnitt 5 (reguläre Discovery, zwingender Blocker, Freigabe). Diese Datei regelt nur, **welche** Fragen und **wie**.
+Wie viele Runden erlaubt sind und was ohne Antwort passiert, regelt SKILL.md Abschnitt 5 (Discovery, Interview, zwingender Blocker, Freigabe). Diese Datei regelt nur, **welche** Fragen und **wie**.
 
 ## Selbst klären (nie fragen)
 Nur so weit, wie es den nächsten prüfbaren Schritt beschleunigt:
@@ -28,12 +28,12 @@ Ein **zwingender Blocker** ist ein Input, ohne den kein sinnvoller Default mögl
 
 ## Formulierung
 - Jede Frage eigenständig verständlich (der User sieht evtl. nur den Dialog).
-- Optionen statt offener Frage, empfohlene Option zuerst mit „(Empfohlen)“ und einem Satz Warum.
+- Bei Entscheidungen Optionen statt offener Frage, empfohlene Option zuerst mit „(Empfohlen)“ und einem Satz Warum. Reine Faktenfragen („Ist die Zahl echt?“) ohne künstliche Empfehlung stellen.
 - Zusammenhängende Fragen bündeln, unabhängige auf spätere Runden verteilen.
 - Bei Geschmacksfragen Varianten zeigen statt Fragen stellen.
 
 ## Interview: implizites Wissen
-Für die Dinge, die der User weiß, aber nie aufschreiben würde. Offene Fragen, keine Optionen; 3 bis 5 auswählen, die zum Vorhaben passen:
+Für die Dinge, die der User weiß, aber nie aufschreiben würde. Entfällt, wenn Memory, Projektregeln oder Beispiele die Antwort schon liefern. Offene Fragen, keine Optionen; 3 bis 5 auswählen, die zum Vorhaben passen:
 - Woran merkst du sofort, dass ein Ergebnis falsch ist?
 - Was hast du schon probiert und verworfen, und warum?
 - Welche Ausnahme oder Sonderregel kennst du, die nirgends steht?

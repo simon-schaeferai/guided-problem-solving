@@ -6,11 +6,11 @@ Die Idee: ein Claude-Code-Skill für Probleme jeder Art, ob Software, Automatisi
 
 ## How it works
 
-- **`SKILL.md`** · der ganze Ablauf in neun Abschnitten: Einstufung, Grundregeln, Kernschleife, Strategie-Wahl, Fragen, Fehler-Lernschleife mit Budget, Validierung, Projektgedächtnis, Effizienz. Hier arbeitest du, wenn du den Skill anpasst.
-- **`references/`** · vier Vertiefungen, die der Skill nur bei Bedarf lädt: Discovery-Fragen, Critical Review, Reverse Engineering, Failure Learning.
+- **`SKILL.md`** · der Kern in acht Abschnitten: Einstufung und Freigaben, Grundregeln, Kernschleife, Strategie-Wahl, Fragen, Fehler-Lernschleife, Validierung, Projektgedächtnis. Für einfache Aufgaben genügen vier davon. Hier arbeitest du, wenn du den Skill anpasst.
+- **`references/`** · sechs Vertiefungen, die der Skill nur lädt, wenn der Fall eintritt: Discovery und Interview, Critical Review, Reverse Engineering, Budget und Zähler, Schutz vor Doppelausführung, Projektgedächtnis.
 - **`templates/`** · sieben Vorlagen für das Projektgedächtnis. Maßgeblich ist `PROGRESS.md` (nächster Schritt, Freigabestatus, Zähler, Freigaben); alle anderen entstehen nur, wenn sie Inhalt haben.
 
-Die zentrale Konstante: **drei Zähler** (Budget, gescheiterte Ansätze bis 3, Versuche ohne Fortschritt bis 2), die kein Strategie- oder Sessionwechsel zurücksetzt.
+Die zentrale Konstante: Einfache Probleme bleiben einfach (höchstens drei kostenlose Versuche, kein Ballast). Sobald Versuche Geld oder viel Zeit kosten, greifen **drei Zähler** (Budget, gescheiterte Ansätze bis 3, Versuche ohne Fortschritt bis 2), die kein Strategie- oder Sessionwechsel zurücksetzt.
 
 ## Quick start
 
@@ -49,7 +49,7 @@ Mach weiter mit dem Rechnungsimport.
 ## Limitations
 
 - Der Skill ist auf Deutsch geschrieben. Ein englischer Fork ist willkommen.
-- Er ist bisher an Szenarien am Text geprüft (Trockenprüfung) und mit unabhängigen Audits nachgeschärft, aber noch nicht in vielen echten Läufen erprobt.
+- Er wurde mit unabhängigen Audits und fünf Testläufen in einer Sandbox nachgeschärft (Bugfix, Automatisierung, Business-Problem, kreative Aufgabe, Fortsetzung mit bezahlter Aktion). Die Antworten des Users waren dabei simuliert; viele echte Läufe stehen noch aus.
 - Die Einstufung S, M, L ist eine Urteilsfrage des Modells. Ein riskantes Problem, das harmlos wirkt, kann zu niedrig eingestuft werden; die Freigabeprüfung pro Aktion fängt das bei kritischen Aktionen ab, nicht bei Qualitätsfragen.
 - Projektregeln (zum Beispiel `CLAUDE.md`) haben Vorrang. In streng geregelten Projekten verhält sich der Skill deshalb vorsichtiger.
 
