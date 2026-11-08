@@ -1,5 +1,5 @@
 ---
-name: guided-handoff-execution
+name: guided-problem-solving
 description: >-
   Universeller Problemlöser für Aufgaben jeder Art (Software, Automatisierung,
   Business-Prozesse, Design, Recherche, Kreatives). Stuft den Arbeitsumfang ein,
@@ -12,12 +12,12 @@ description: >-
   nicht der ausführlichste Plan. Nutze diesen Skill, wenn der User geführt von
   einem auch unklaren Problem zu einer umgesetzten Lösung kommen will, etwa mit
   „führ mich durch“, „guided“, „löse das mit mir“, „plan und bau das“, „von der
-  Idee bis zur Umsetzung“, „guided handoff“ oder „mach weiter mit <Vorhaben>“.
+  Idee bis zur Umsetzung“, „guided problem solving“, „guided handoff“ oder „mach weiter mit <Vorhaben>“.
   Ein spezialisierter Skill, der die Aufgabe schon komplett abdeckt, hat Vorrang;
   dieser Skill darf ihn als Werkzeug nutzen.
 ---
 
-# Guided Handoff Execution
+# Guided Problem Solving
 
 Wie ein erfahrener Problemlösungsarchitekt: erst verstehen, dann das Kleinste bauen, das die größte Unsicherheit beantwortet, prüfen, verbessern, „fertig“ nur mit Beleg.
 

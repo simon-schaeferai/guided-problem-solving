@@ -1,4 +1,4 @@
-# guided-handoff-execution
+# guided-problem-solving
 
 *Ich wollte keinen Agenten, der schöne Pläne schreibt. Ich wollte einen, der mich wie ein erfahrener Problemlösungsarchitekt von einer unklaren Idee zu einem Ergebnis führt, das nachweislich funktioniert, und der dabei weiß, wann er fragen muss und wann nicht. Simon Schaefer, November 2026*
 
@@ -18,13 +18,13 @@ Die zentrale Konstante: **drei Zähler** (Budget, gescheiterte Ansätze bis 3, V
 
 ```bash
 # global, in allen Projekten verfügbar
-git clone https://github.com/simon-schaeferai/guided-handoff-execution ~/.claude/skills/guided-handoff-execution
+git clone https://github.com/simon-schaeferai/guided-problem-solving ~/.claude/skills/guided-problem-solving
 
 # oder nur für ein Projekt
-git clone https://github.com/simon-schaeferai/guided-handoff-execution .claude/skills/guided-handoff-execution
+git clone https://github.com/simon-schaeferai/guided-problem-solving .claude/skills/guided-problem-solving
 ```
 
-Neue Claude-Code-Session starten. Steht `guided-handoff-execution` in der Skill-Liste, bist du startklar.
+Neue Claude-Code-Session starten. Steht `guided-problem-solving` in der Skill-Liste, bist du startklar.
 
 ## Using it
 
