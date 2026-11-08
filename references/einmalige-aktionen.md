@@ -21,7 +21,8 @@ Gilt nur für freigabepflichtige Aktionen, die bei zweifacher Ausführung schade
 | Vorgefundener Status | Vorgehen |
 |---|---|
 | reserviert | Lesend prüfen, ob ausgelöst wurde (Zielsystem, Logs, Abrechnung, Ausgabedateien). Belegt nicht ausgelöst: **frei**, einmal auslösen. Belegt ausgelöst: **ausgelöst**. Unklar: **wartet auf Klärung**. |
-| ausgelöst | Ergebnis nur lesend abholen. Nie erneut auslösen. Ergebnis nicht auffindbar: **wartet auf Klärung**. |
+| ausgelöst | Ergebnis nur lesend abholen. Nie erneut auslösen. Ergebnis nicht auffindbar oder Dienst nicht erreichbar: Status bleibt **ausgelöst**, der nächste Schritt **wartet auf Klärung**. |
+| unbekannt oder veraltet (z. B. „begonnen“) | wie „reserviert“ behandeln |
 | wartet auf Klärung | Nichts auslösen. Den User mit dem Befund fragen (Blocker, einmal). |
 
 Lesende Prüfungen, die Zugangsdaten brauchen, sind selbst freigabepflichtig, wenn die Freigabe sie nicht schon abdeckt.

@@ -22,7 +22,7 @@ Gedächtnis sofort anlegen und aus dem Chat übernehmen, was die Fortsetzung bra
 1. Kandidaten suchen: `~/Desktop` und, falls bekannt, `<arbeitsordner>/.guided/` nach Stichwort oder Projektkennung.
 2. **Jeden** Treffer prüfen, auch einen einzelnen: Passen Vorhaben und Arbeitsordner im `PROGRESS.md`-Kopf zum Auftrag, und existiert der Arbeitsordner? Nicht passende verwerfen.
 3. Mehrere passende Treffer: mit Projektkennung, Datum und Vorhaben zur Auswahl stellen. Keiner und Arbeitsordner unbekannt: gezielt nach dem Pfad fragen.
-4. `PROGRESS.md` und `NEXT_STEPS.md` lesen, weitere Dateien nur bei Bedarf. Zähler übernehmen, Freigaben nach SKILL.md 1b prüfen, offene Status nach `references/einmalige-aktionen.md` klären, bereits gestellte Fragen nicht wiederholen. Stand in einem Satz melden und weitermachen.
+4. `PROGRESS.md` und `NEXT_STEPS.md` lesen, weitere Dateien nur bei Bedarf. Zähler übernehmen, Freigaben nach SKILL.md 1b prüfen, offene Status nach `references/einmalige-aktionen.md` klären, bereits gestellte Fragen nicht wiederholen (eine offene Frage ohne Datum einmal stellen und datieren). Stand in einem Satz melden und weitermachen.
 
 ## Übergabetest
 Könnte eine neue Session mit `PROGRESS.md` und `NEXT_STEPS.md` in einer Minute weitermachen? Wenn nein, nachschärfen. `PROGRESS.md` unter ca. 60 Zeilen halten, verlinken statt kopieren.

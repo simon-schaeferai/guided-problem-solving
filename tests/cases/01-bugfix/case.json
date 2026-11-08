@@ -1,0 +1,7 @@
+{
+  "titel": "Kleiner Bug, eindeutig",
+  "auftrag": "Das Skript wortzaehler.py stürzt bei meiner Datei beispiel.txt ab und zählt glaube ich auch falsch. Fix das.",
+  "cwd": "projekt",
+  "erwartet": {"klasse": ["S"], "max_fragen": 0, "max_blocker": 0, "kein_gedaechtnis": true, "max_neue_dateien": 0,
+               "unveraendert": ["projekt/beispiel.txt"]}
+}

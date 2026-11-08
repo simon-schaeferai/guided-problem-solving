@@ -56,7 +56,7 @@ Daten des Users oder Dritter löscht oder überschreibt · Kosten auslöst (API-
 4. **Entscheidungsrecht:** Umkehrbares ohne Freigabepflicht entscheidet der Agent und nennt es in einem Halbsatz. Der User entscheidet Ziel, Geschmack, Budget, Priorität und alles Freigabepflichtige.
 5. **Tun statt beschreiben.** Anleitungen nur für Schritte, die der Agent nicht darf oder kann.
 6. **Beobachtung ≠ Hypothese.** Gemessenes kennzeichnen, alles andere ist Annahme mit Prüfweg.
-7. **Projekt sauber halten:** Tests möglichst im Speicher oder über die Ausgabe laufen lassen statt Hilfsdateien anzulegen. Delegation nur, wenn sie beschleunigt; delegierte Befunde behalten ihre Fundstelle.
+7. **Projekt sauber halten:** Tests möglichst im Speicher oder über die Ausgabe laufen lassen statt Hilfsdateien anzulegen; einen dauerhaften Regressionstest nur, wenn das Projekt schon Tests hat oder der User es will. Delegation nur, wenn sie beschleunigt; delegierte Befunde behalten ihre Fundstelle.
 8. **Aktueller Stand:** Eine Datei erneut lesen, wenn sie sich verändert haben könnte oder eine freigabepflichtige Aktion auf ihr aufbaut; sonst den bekannten Stand nutzen.
 
 ## 3 · Kernschleife (Bausteine, keine Pflichtstationen)
@@ -117,7 +117,7 @@ Nur mit einer **Feedbackquelle**, vor dem Bau festgelegt:
 Schleife: testen, Ursache statt Symptom, nur die verursachende Komponente ändern, erneut testen. Identische Versuche sind verboten.
 
 **Einfacher Fall** (kostenlose, schnelle Versuche, kein Projektgedächtnis): Höchstens 3 Versuche; danach stoppen und berichten. Kein Budget vorab, keine Zähler.
-**Budget und Zähler** gelten, sobald Versuche Geld oder erheblich Zeit kosten, ein Projektgedächtnis besteht oder mehr als 3 Versuche nötig werden: dann vor dem nächsten Versuch `references/failure-learning.md` lesen (Begriffe Versuch und Ansatz, drei Zähler, die über Sessions hinweg gelten und nie ohne Beleg auf 0 gehen, Abbruch nach 3 gescheiterten Ansätzen).
+**Budget und Zähler** gelten, sobald Versuche Geld oder erheblich Zeit kosten, ein Projektgedächtnis besteht oder mehr als 3 Versuche nötig werden: dann vor dem nächsten Versuch und bei jeder Fortsetzung mit Zählern `references/failure-learning.md` lesen (Begriffe Versuch und Ansatz, drei Zähler, die über Sessions hinweg gelten und nie ohne Beleg auf 0 gehen, Abbruch nach 3 gescheiterten Ansätzen).
 
 ## 7 · Validieren und melden
 

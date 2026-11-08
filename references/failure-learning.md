@@ -19,7 +19,7 @@ Gesamtbudget (Versuche, Zeit, Kosten), Mindestfortschritt je Versuch und Qualit�
 
 - Versuchsnummern laufen über Ansätze hinweg weiter.
 - Kein Session-, Strategie- oder Namenswechsel setzt einen Zähler zurück. Kein Zähler wird ohne Beleg auf 0 gesetzt; ein nicht belegbarer Stand heißt **unbekannt**.
-- Ein ausgelöster, aber noch ungeprüfter Versuch zählt im Budget mit seinen Höchstkosten, bis die echten Kosten belegt sind.
+- Ein ausgelöster, aber noch ungeprüfter Versuch zählt im Budget mit der Obergrenze seiner Freigabe, bis die echten Kosten belegt sind.
 - Bei Projektgedächtnis stehen die Zähler in `PROGRESS.md`, Details je Versuch in `TEST_RESULTS.md`.
 
 ## Schleife

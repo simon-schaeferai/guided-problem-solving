@@ -9,6 +9,7 @@ Die Idee: ein Claude-Code-Skill für Probleme jeder Art, ob Software, Automatisi
 - **`SKILL.md`** · der Kern in acht Abschnitten: Einstufung und Freigaben, Grundregeln, Kernschleife, Strategie-Wahl, Fragen, Fehler-Lernschleife, Validierung, Projektgedächtnis. Für einfache Aufgaben genügen vier davon. Hier arbeitest du, wenn du den Skill anpasst.
 - **`references/`** · sechs Vertiefungen, die der Skill nur lädt, wenn der Fall eintritt: Discovery und Interview, Critical Review, Reverse Engineering, Budget und Zähler, Schutz vor Doppelausführung, Projektgedächtnis.
 - **`templates/`** · sieben Vorlagen für das Projektgedächtnis. Maßgeblich ist `PROGRESS.md` (nächster Schritt, Freigabestatus, Zähler, Freigaben); alle anderen entstehen nur, wenn sie Inhalt haben.
+- **`tests/`** · fünf feste Testfälle mit maschineller Prüfung. Nach jeder Änderung am Skill: `python3 tests/run.py` (Details in `tests/README.md`).
 
 Die zentrale Konstante: Einfache Probleme bleiben einfach (höchstens drei kostenlose Versuche, kein Ballast). Sobald Versuche Geld oder viel Zeit kosten, greifen **drei Zähler** (Budget, gescheiterte Ansätze bis 3, Versuche ohne Fortschritt bis 2), die kein Strategie- oder Sessionwechsel zurücksetzt.
 

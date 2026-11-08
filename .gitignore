@@ -10,3 +10,6 @@ Thumbs.db
 .env.*
 # Lokales Projektgedächtnis, falls jemand den Skill im eigenen Ordner testet
 .guided/
+# Python
+__pycache__/
+*.pyc

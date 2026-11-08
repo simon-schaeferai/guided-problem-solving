@@ -1,0 +1,7 @@
+{
+  "titel": "Automatisierung mit Datenfallen",
+  "auftrag": "Ich brauche ein Skript, das alle CSV-Dateien in diesem Ordner zu einer Kundenliste ohne Dubletten zusammenführt.",
+  "cwd": "projekt",
+  "erwartet": {"klasse": ["S", "M"], "max_fragen": 3, "max_blocker": 0, "kein_gedaechtnis": true, "max_neue_dateien": 3,
+               "unveraendert": ["projekt/kunden_jan.csv", "projekt/kunden_feb.csv"]}
+}
